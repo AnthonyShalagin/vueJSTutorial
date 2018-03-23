@@ -8,14 +8,20 @@
 <body>
 
 	<div id="app"> 
-	{{ message }}		
+		<input v-model="message"><br/>
+		{{ message }}	
+
+		<ul>
+			<li v-for= "food in food_items">{{ food }}</li>
+		</ul>
 	</div>
 	
 	<script>
 	new Vue ({
 		el: '#app', 
 		data: {
-			'message': 'Hello world'
+			'message': 'Hello world', 
+			'food_items':  ['hamburger', 'hotdog', 'fries']
 		}
 	});	
 	</script>
